@@ -1,5 +1,9 @@
-*.class
+
+#project Files #
+*.iml
 .*
+
+*.class
 
 # Package Files #
 *.jar
