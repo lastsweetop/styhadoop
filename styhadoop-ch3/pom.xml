@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>styhadoop-ch2</artifactId>
+    <artifactId>styhadoop-ch3</artifactId>
     <packaging>jar</packaging>
 
-    <name>styhadoop-ch2</name>
+    <name>styhadoop-ch3</name>
     <url>http://maven.apache.org</url>
 
     <properties>
