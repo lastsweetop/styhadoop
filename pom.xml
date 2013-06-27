@@ -7,6 +7,7 @@
     <modules>
         <module>styhadoop-ch2</module>
         <module>styhadoop-ch3</module>
+        <module>styhadoop-ch4</module>
     </modules>
     <packaging>pom</packaging>
 
