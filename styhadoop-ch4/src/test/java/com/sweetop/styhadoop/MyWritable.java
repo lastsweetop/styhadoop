@@ -11,7 +11,6 @@ class MyWritable extends GenericWritable {
     MyWritable(Writable writable) {
         set(writable);
     }
-    HttpServlet
 
     public static Class<? extends Writable>[] CLASSES=null;
 
