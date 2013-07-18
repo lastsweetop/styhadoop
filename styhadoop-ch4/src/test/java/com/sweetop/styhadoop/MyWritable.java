@@ -4,8 +4,6 @@ import org.apache.hadoop.io.GenericWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 
-import javax.servlet.http.HttpServlet;
-
 class MyWritable extends GenericWritable {
 
     MyWritable(Writable writable) {
