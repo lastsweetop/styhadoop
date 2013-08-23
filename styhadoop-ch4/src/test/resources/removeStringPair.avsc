@@ -1,0 +1,8 @@
+{
+    "type":"record",
+    "name":"com.sweetop.styhadoop.StringPair",
+    "doc":"A pair of strings",
+    "fields":[
+        {"name":"left","type":"string"}
+    ]
+}

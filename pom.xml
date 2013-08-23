@@ -8,6 +8,7 @@
         <module>styhadoop-ch2</module>
         <module>styhadoop-ch3</module>
         <module>styhadoop-ch4</module>
+        <module>aa</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -20,6 +21,26 @@
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-core</artifactId>
                 <version>1.0.4</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro</artifactId>
+                <version>1.7.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-core-asl</artifactId>
+                <version>1.9.9</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-mapper-asl</artifactId>
+                <version>1.9.9</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -43,6 +64,27 @@
                                         <arg value="deploy.sh"></arg>
                                     </exec>
                                 </target>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.avro</groupId>
+                    <artifactId>avro-maven-plugin</artifactId>
+                    <version>1.7.0</version>
+                    <executions>
+                        <execution>
+                            <id>schemas</id>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>schema</goal>
+                            </goals>
+                            <configuration>
+                                <includes>
+                                    <include>StringPair.avsc</include>
+                                </includes>
+                                <sourceDirectory>src/test/resources</sourceDirectory>
+                                <outputDirectory>${project.build.directory}/generated-sources/java</outputDirectory>
                             </configuration>
                         </execution>
                     </executions>
